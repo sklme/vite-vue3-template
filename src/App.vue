@@ -1,8 +1,3 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-</script>
-
 <template>
   <h1 id="vue-3-">Vue 3 开发环境</h1>
   <h2 id="-">代码构建</h2>
@@ -63,7 +58,12 @@
       </tr>
     </tbody>
   </table>
+  <eslintVue :x="2" />
 </template>
+
+<script setup lang="ts">
+import eslintVue from './components/eslint-test.vue';
+</script>
 
 <style>
 body {

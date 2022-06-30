@@ -13,5 +13,10 @@ module.exports = {
     'prefer-regex-literals': 1,
     'prefer-template': 1,
     // prefer代码风格系列
+
+    radix: 1,
+    'block-scoped-var': 1,
+    'class-methods-use-this': 1,
+    eqeqeq: 1,
   },
 };

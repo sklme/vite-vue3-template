@@ -58,12 +58,9 @@
       </tr>
     </tbody>
   </table>
-  <eslintVue :x="2" />
 </template>
 
-<script setup lang="ts">
-import eslintVue from './components/eslint-test.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style>
 body {

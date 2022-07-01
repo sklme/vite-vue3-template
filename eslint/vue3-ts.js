@@ -7,4 +7,12 @@ module.exports = {
   parserOptions: {
     parser: '@typescript-eslint/parser',
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      env: {
+        node: true,
+      },
+    },
+  ],
 };

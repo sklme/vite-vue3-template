@@ -1,7 +1,7 @@
 <template>
   <Readme></Readme>
   <CodeTest></CodeTest>
-  <TestExposeVue></TestExposeVue>
+  <TestExposeVue ref="test"></TestExposeVue>
 </template>
 
 <script setup lang="ts">
@@ -9,12 +9,19 @@ import 'github-markdown-css';
 import Readme from '../README.md';
 import CodeTest from '~/components/preset/md/code.md';
 import TestExposeVue from '~/components/preset/TestExpose.vue';
+import { onMounted, ref } from 'vue';
 
-console.log(TestExposeVue);
-console.log(TestExposeVue.test);
-console.log(TestExposeVue.test);
-console.log(TestExposeVue.test);
-console.log(TestExposeVue.test);
+type T = InstanceType<typeof TestExposeVue>;
+
+const test = ref<InstanceType<typeof TestExposeVue>>();
+
+onMounted(() => {
+  // t.value?.test();
+  test.value?.test();
+  test.value?.test();
+  test.value?.test();
+  test.value?.test();
+});
 </script>
 
 <style lang="less">

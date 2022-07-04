@@ -1,8 +1,16 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import Markdown from 'vite-plugin-md';
 import path from 'path';
-import hljs from 'highlight.js';
+import { defineConfig } from 'vite';
+
+// 支持md
+import Markdown from 'vite-plugin-md';
+import Prism from 'markdown-it-prism';
+import LinkAttributes from 'markdown-it-link-attributes';
+// 代码的
+const markdownWrapperClasses = 'markdown-body';
+
+// 自动引入组件
+import Components from 'unplugin-vue-components/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,20 +19,26 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
-      style: {
-        baseStyle: 'github',
+      // markdown 容器的类
+      wrapperClasses: markdownWrapperClasses,
+      markdownItSetup(md) {
+        // https://prismjs.com/
+        md.use(Prism);
+        md.use(LinkAttributes, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        });
       },
-      markdownItOptions: {
-        highlight: function (str, lang) {
-          if (lang && hljs.getLanguage(lang)) {
-            try {
-              return hljs.highlight(str, { language: lang }).value;
-            } catch (__) {}
-          }
-
-          return ''; // use external default escaping
-        },
-      },
+    }),
+    Components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue', 'md'],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: 'src/components.d.ts',
     }),
   ],
   server: {

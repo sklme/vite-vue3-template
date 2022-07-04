@@ -1,14 +1,14 @@
 # 这是一个 code 的测试
 
-```TypeScript
-function testFn (s: string):void {
-  console.log(s)
+```typescript
+function testFn(s: string): void {
+  console.log(s);
 }
 
-let color = 'red'
+let color = 'red';
 ```
 
-```JSON
+```json
 {
   "X": "2"
 }

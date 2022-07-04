@@ -1,4 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+// md样式支持
+import '~/style/markdown.less';
+
+createApp(App).mount('#app');

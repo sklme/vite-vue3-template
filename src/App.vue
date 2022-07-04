@@ -1,7 +1,10 @@
 <template>
   <div>
+    <div>
+      <h2>Reactivity Transform</h2>
+      <ReactivityTransform></ReactivityTransform>
+    </div>
     <TSwitch size="large"></TSwitch>
-    <div>{{ x }}</div>
     <Readme></Readme>
     <CodePreset></CodePreset>
   </div>
@@ -9,10 +12,4 @@
 
 <script setup lang="ts">
 import Readme from '../README.md';
-
-const x = ref('23');
-
-console.log(x.value);
-console.log(x.value);
-console.log(x.value);
 </script>

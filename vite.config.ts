@@ -25,6 +25,7 @@ export default defineConfig({
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
+      reactivityTransform: true,
     }),
     Markdown({
       // markdown 容器的类

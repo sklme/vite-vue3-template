@@ -9,7 +9,9 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CodePreset: typeof import('./components/preset/md/CodePreset.md')['default']
     EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
+    ReactivityTransform: typeof import('./components/preset/reactivity-transform/reactivityTransform.vue')['default']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
+    TSlider: typeof import('tdesign-vue-next')['Slider']
     TSwitch: typeof import('tdesign-vue-next')['Switch']
   }
 

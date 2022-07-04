@@ -43,6 +43,11 @@ export default defineConfig({
       eslintrc: {
         enabled: true,
       },
+      resolvers: [
+        TDesignResolver({
+          library: 'vue-next',
+        }),
+      ],
     }),
     Components({
       // allow auto load markdown components under `./src/components/`

@@ -3,18 +3,22 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 // 支持md
-import Markdown from 'vite-plugin-md';
-import Prism from 'markdown-it-prism';
 import LinkAttributes from 'markdown-it-link-attributes';
-// 代码的
+import Prism from 'markdown-it-prism';
+import Markdown from 'vite-plugin-md';
+// marddown 的容器的类
 const markdownWrapperClasses = 'markdown-body';
 
 // 自动引入
 // 组件
-import Components from 'unplugin-vue-components/vite';
 import { TDesignResolver } from 'unplugin-vue-components/resolvers';
+import Components from 'unplugin-vue-components/vite';
 // api
 import AutoImport from 'unplugin-auto-import/vite';
+
+// 编译输出的配置
+const ASSETS_DIR = 'res';
+const OUT_DIR = 'dist';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -68,6 +72,32 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': `${path.resolve(__dirname, 'src')}`,
+    },
+  },
+  // 编译配置
+  build: {
+    outDir: OUT_DIR,
+    assetsDir: ASSETS_DIR,
+    rollupOptions: {
+      output: {
+        chunkFileNames: `${ASSETS_DIR}/js/[name]-[hash].js`,
+        entryFileNames: `${ASSETS_DIR}/js/[name]-[hash].js`,
+
+        assetFileNames: ({ name }) => {
+          const namePattern = '[name]-[hash][extname]';
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+            return `${ASSETS_DIR}/images/${namePattern}`;
+          }
+
+          if (/\.css$/.test(name ?? '')) {
+            return `${ASSETS_DIR}/css/${namePattern}`;
+          }
+
+          // default value
+          // ref: https://rollupjs.org/guide/en/#outputassetfilenames
+          return `${ASSETS_DIR}/${namePattern}`;
+        },
+      },
     },
   },
 });

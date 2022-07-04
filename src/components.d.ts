@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     Code: typeof import('./components/preset/md/code.md')['default']
     EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
+    TSwitch: typeof import('tdesign-vue-next')['Switch']
   }
 
 }

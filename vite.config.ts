@@ -9,8 +9,12 @@ import LinkAttributes from 'markdown-it-link-attributes';
 // 代码的
 const markdownWrapperClasses = 'markdown-body';
 
-// 自动引入组件
+// 自动引入
+// 组件
 import Components from 'unplugin-vue-components/vite';
+import { TDesignResolver } from 'unplugin-vue-components/resolvers';
+// api
+import AutoImport from 'unplugin-auto-import/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -33,12 +37,24 @@ export default defineConfig({
         });
       },
     }),
+    AutoImport({
+      imports: ['vue', 'vue-router', 'vue/macros'],
+      dts: 'src/auto-imports.d.ts',
+      eslintrc: {
+        enabled: true,
+      },
+    }),
     Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      resolvers: [
+        TDesignResolver({
+          library: 'vue-next',
+        }),
+      ],
     }),
   ],
   server: {

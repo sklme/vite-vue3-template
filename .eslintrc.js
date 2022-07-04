@@ -6,7 +6,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['vite.config.ts'],
+      files: ['./*.ts'],
       env: {
         node: true,
       },

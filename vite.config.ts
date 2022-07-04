@@ -16,6 +16,9 @@ import Components from 'unplugin-vue-components/vite';
 // api
 import AutoImport from 'unplugin-auto-import/vite';
 
+// windicss
+import WindiCSS from 'vite-plugin-windicss';
+
 // 编译输出的配置
 const ASSETS_DIR = 'res';
 const OUT_DIR = 'dist';
@@ -27,6 +30,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true,
     }),
+    WindiCSS(),
     Markdown({
       // markdown 容器的类
       wrapperClasses: markdownWrapperClasses,

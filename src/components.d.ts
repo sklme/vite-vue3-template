@@ -10,7 +10,10 @@ declare module '@vue/runtime-core' {
     CodePreset: typeof import('./components/preset/md/CodePreset.md')['default']
     EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
     ReactivityTransform: typeof import('./components/preset/reactivity-transform/reactivityTransform.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
+    TSwitch: typeof import('tdesign-vue-next')['Switch']
     WindiCSS: typeof import('./components/preset/WindiCSS/WindiCSS.vue')['default']
   }
 

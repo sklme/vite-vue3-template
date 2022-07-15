@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
     ReactivityTransform: typeof import('./components/preset/reactivity-transform/reactivityTransform.vue')['default']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
+    TSwitch: typeof import('tdesign-vue-next')['Switch']
     WindiCSS: typeof import('./components/preset/WindiCSS/WindiCSS.vue')['default']
   }
 

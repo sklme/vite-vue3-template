@@ -11,7 +11,8 @@
     "github-markdown-css": "^5.1.0",
     "prism-theme-vars": "^0.2.3",
     "tdesign-vue-next": "^0.17.2",
-    "vue": "^3.2.36"
+    "vue": "^3.2.36",
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
@@ -35,5 +36,8 @@
     "vite-plugin-windicss": "^1.8.6",
     "vue-tsc": "^0.38.2",
     "windicss": "^3.5.6"
+  },
+  "overrides": {
+    "core-js": "^3.23.4"
   }
 }

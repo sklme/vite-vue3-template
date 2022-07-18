@@ -36,7 +36,12 @@ const feature: RouteRecordRaw = {
       "unplugin-vue-components": "^0.21.0", 
       */
       path: '/unplugin',
-      name: '',
+      name: 'Unplugin',
+      component: {},
+    },
+    {
+      path: 'cz',
+      name: 'Comitizen',
       component: {},
     },
   ],

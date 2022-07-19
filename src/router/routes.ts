@@ -1,32 +1,36 @@
 import { RouteRecordRaw } from 'vue-router';
+import FeatIndexVue from '~/components/FeatIndex.vue';
+import WindiCSSVue from '~/components/preset/WindiCSS/WindiCSS.vue';
 
 const feature: RouteRecordRaw = {
   path: '/feature',
   name: 'Feature',
-  component: {},
+  redirect: () => {
+    return { name: 'Windicss' };
+  },
   children: [
     {
-      path: '/windicss',
+      path: 'windicss',
       name: 'Windicss',
-      component: {},
+      component: WindiCSSVue,
     },
     {
-      path: '/md',
+      path: 'md',
       name: 'Markdown',
       component: {},
     },
     {
-      path: '/pinia',
+      path: 'pinia',
       name: 'Pinia',
       component: {},
     },
     {
-      path: '/vitest',
+      path: 'vitest',
       name: 'Vitest',
       component: {},
     },
     {
-      path: '/vueuse',
+      path: 'vueuse',
       name: 'Vueuse',
       component: {},
     },
@@ -35,7 +39,7 @@ const feature: RouteRecordRaw = {
       "unplugin-auto-import": "^0.9.2",
       "unplugin-vue-components": "^0.21.0", 
       */
-      path: '/unplugin',
+      path: 'unplugin',
       name: 'Unplugin',
       component: {},
     },
@@ -51,7 +55,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Index',
-    component: {},
+    component: FeatIndexVue,
   },
   // 功能
   feature,

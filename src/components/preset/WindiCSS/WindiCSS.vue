@@ -1,12 +1,8 @@
 <template>
-  <div p="20px">测试间距</div>
-  <div p="2" text="hex-c0f" bg="hex-cf0">测试颜色</div>
+  <div text="dark-100 xl">Windi CSS</div>
+  <p text="base 14px" py="8px">支持windi CSS，可以使用新的方式写样式。</p>
 </template>
 
 <script setup lang="ts">
 //
 </script>
-
-<style lang="less" scoped>
-//
-</style>

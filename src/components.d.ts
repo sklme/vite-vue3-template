@@ -9,11 +9,14 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CodePreset: typeof import('./components/preset/md/CodePreset.md')['default']
     EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
+    FeatIndex: typeof import('./components/FeatIndex.vue')['default']
     ReactivityTransform: typeof import('./components/preset/reactivity-transform/reactivityTransform.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
     TSwitch: typeof import('tdesign-vue-next')['Switch']
+    Undefined: typeof import('./components/index.vue')['default']
+    Windicss: typeof import('./components/preset/WindiCSS/Windicss.md')['default']
     WindiCSS: typeof import('./components/preset/WindiCSS/WindiCSS.vue')['default']
   }
 

@@ -1,34 +1,50 @@
 # Vue 3 开发环境
 
-## 代码构建
+## 开发、构建与发布
 
-| 功能                          | 实现工具   |
-| ----------------------------- | ---------- |
-| 代码构建                      | Vite       |
-| JS 增强                       | TypeScript |
-| 代码检查                      | ESLint     |
-| 代码美化与风格统一            | Prettier   |
-| [CSS 增强 ](feature/windicss) | Windi CSS  |
+| 功能                 | 实现工具                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 代码构建             | Vite                                                                                                                                                    |
+| JS 类型              | TypeScript                                                                                                                                              |
+| CSS 增强             | Windi CSS                                                                                                                                               |
+| 按需自动引用         | unplugin-auto-import 自动按需引用 vue 的依赖，unplugin-vue-components 自动按需引用 vue 组件                                                             |
+| \*组件测试与单元测试 | vitest                                                                                                                                                  |
+| \*E2E 测试           | cypress                                                                                                                                                 |
+| \*File-base Routing  | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                                                                                      |
+| \*Layout System      | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)和[vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) |
+| \*ci and cd          | -                                                                                                                                                       |
 
 ### Vite
 
-使用 Vite 作为构建攻击，开发体验相比 webpack 大幅改善
+使用 Vite 作为构建工具，开发体验相比 webpack 大幅改善
 
 ### TypeScript
 
 使用 TypeScript
 
-### ESLint + Prettier
-
-集成 ESlint 和 Prettier 作为代码检查和代码美化的工具
-
 ### Windi CSS
 
 使用 Windi CSS， 用另一种风格写 css
 
-## 业务优化
+## 规范化
 
-| 功能 | 实现工具  |
-| ---- | --------- |
-| 路由 | vueRouter |
-| 状态 | Pinia     |
+| 功能                | 实现工具                    |
+| ------------------- | --------------------------- |
+| 代码检查            | ESLint                      |
+| TypeScript 类型检查 | ESlint 和 typescript-eslint |
+| 代码美化与风格统一  | Prettier                    |
+| \*git 提交规范化    | Comitizen                   |
+
+### ESLint + Prettier
+
+集成 ESlint 和 Prettier 作为代码检查和代码美化的工具
+
+## 功能
+
+| 功能                  | 实现工具                                                           |
+| --------------------- | ------------------------------------------------------------------ |
+| 路由                  | vueRouter                                                          |
+| \*状态                | Pinia                                                              |
+| markdown 组件化       | vite-plugin-md 和 markdown-it, 使用 markdown-it-prism 实现代码高亮 |
+| \*coposition api 增强 | vueuse                                                             |
+| \*icon                | 未实现                                                             |

@@ -14,9 +14,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
-    TSwitch: typeof import('tdesign-vue-next')['Switch']
-    Undefined: typeof import('./components/index.vue')['default']
-    Windicss: typeof import('./components/preset/WindiCSS/Windicss.md')['default']
     WindiCSS: typeof import('./components/preset/WindiCSS/WindiCSS.vue')['default']
   }
 

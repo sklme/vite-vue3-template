@@ -34,7 +34,7 @@
     "vite": "3",
     "vite-plugin-md": "^0.18.1",
     "vite-plugin-windicss": "^1.8.7",
-    "vue-tsc": "^0.38.2",
+    "vue-tsc": "^0.38.9",
     "windicss": "^3.5.6"
   },
   "overrides": {

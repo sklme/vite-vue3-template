@@ -62,8 +62,14 @@ export const criteriaFeatures: Feat[] = [
     desc: '代码的美化和风格的统一',
   },
   {
-    title: '*Comitizen',
+    title: '*Commitizen',
     desc: 'git提交规范化',
+    src: 'https://github.com/commitizen/cz-cli',
+  },
+  {
+    title: '*conventional-changelog',
+    desc: '从Commitizen规范化的git提交信息中，自动提取changlog',
+    src: 'https://github.com/conventional-changelog/conventional-changelog',
   },
 ];
 

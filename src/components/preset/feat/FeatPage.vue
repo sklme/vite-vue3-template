@@ -8,22 +8,20 @@
       pt="12px"
       first-of-type:pt="0"
     >
-      <router-link :to="feat.src || ''" class="link">
+      <div class="link" cursor="pointer" @click="jump(feat.src)">
         <div text="lg" hover:text="underline" class="title">
           {{ feat.title }}
         </div>
         <p text="base 14px gray-500" py="8px">{{ feat.desc }}</p>
-      </router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-export interface Feat {
-  title: string;
-  desc: string;
-  src?: string;
-}
+import { Feat } from '~/components/preset/type';
+// 路由
+const router = useRouter();
 
 interface Props {
   features: Feat[];
@@ -31,6 +29,16 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+
+// 跳转到其他地方
+const jump = (src?: string) => {
+  if (!src) return;
+  if (/^http/.test(src)) {
+    window.open(src, '_blank');
+  } else {
+    void router.push(src);
+  }
+};
 </script>
 
 <style lang="less" scoped>

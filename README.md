@@ -30,12 +30,12 @@
 
 ## 规范化
 
-| 功能                | 实现工具                    |
-| ------------------- | --------------------------- |
-| 代码检查            | ESLint                      |
-| TypeScript 类型检查 | ESlint 和 typescript-eslint |
-| 代码美化与风格统一  | Prettier                    |
-| \*git 提交规范化    | Comitizen                   |
+| 功能                | 实现工具                                           |
+| ------------------- | -------------------------------------------------- |
+| 代码检查            | ESLint                                             |
+| TypeScript 类型检查 | ESlint 和 typescript-eslint                        |
+| 代码美化与风格统一  | Prettier                                           |
+| \*git 提交规范化    | [Commitizen](https://github.com/commitizen/cz-cli) |
 
 ### ESLint + Prettier
 

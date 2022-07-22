@@ -14,6 +14,7 @@
 | \*File-base Routing  | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)                                                                                      |
 | \*Layout System      | [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages)和[vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) |
 | \*ci and cd          | -                                                                                                                                                       |
+| \*changelog 生成     | -                                                                                                                                                       |
 
 ### Vite
 

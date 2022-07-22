@@ -46,6 +46,10 @@ export const buildFeatures: Feat[] = [
     title: '*ci and cd',
     desc: 'To be complete',
   },
+  {
+    title: '*changelog 生成 ',
+    desc: 'To be complete',
+  },
 ];
 
 export const criteriaFeatures: Feat[] = [

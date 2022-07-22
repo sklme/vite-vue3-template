@@ -1,52 +1,30 @@
 import { RouteRecordRaw } from 'vue-router';
-import FeatIndexVue from '~/components/FeatIndex.vue';
-import WindiCSSVue from '~/components/preset/WindiCSS/WindiCSS.vue';
+import BuildFeatVue from '~/components/preset/feat/BuildFeat.vue';
+import CriteriaFeatVue from '~/components/preset/feat/CriteriaFeat.vue';
+import LogicFeatVue from '~/components/preset/feat/LogicFeat.vue';
+import FeatHomeVue from '~/components/preset/FeatHome.vue';
 
 const feature: RouteRecordRaw = {
   path: '/feature',
   name: 'Feature',
   redirect: () => {
-    return { name: 'Windicss' };
+    return { name: 'BuildFeat' };
   },
   children: [
     {
-      path: 'windicss',
-      name: 'Windicss',
-      component: WindiCSSVue,
+      path: 'build_dev_test_deploy',
+      name: 'BuildFeat',
+      component: BuildFeatVue,
     },
     {
-      path: 'md',
-      name: 'Markdown',
-      component: {},
+      path: 'creteria',
+      name: 'Creteria',
+      component: CriteriaFeatVue,
     },
     {
-      path: 'pinia',
-      name: 'Pinia',
-      component: {},
-    },
-    {
-      path: 'vitest',
-      name: 'Vitest',
-      component: {},
-    },
-    {
-      path: 'vueuse',
-      name: 'Vueuse',
-      component: {},
-    },
-    {
-      /*       
-      "unplugin-auto-import": "^0.9.2",
-      "unplugin-vue-components": "^0.21.0", 
-      */
-      path: 'unplugin',
-      name: 'Unplugin',
-      component: {},
-    },
-    {
-      path: 'cz',
-      name: 'Comitizen',
-      component: {},
+      path: 'logic',
+      name: 'Logic',
+      component: LogicFeatVue,
     },
   ],
 };
@@ -55,7 +33,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Index',
-    component: FeatIndexVue,
+    component: FeatHomeVue,
   },
   // 功能
   feature,

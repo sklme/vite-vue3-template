@@ -1,12 +1,13 @@
 # Vue 3 开发环境
 
-## 开发、构建与发布
+## 开发、构建、测试与发布
 
 | 功能                 | 实现工具                                                                                                                                                |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 代码构建             | Vite                                                                                                                                                    |
 | JS 类型              | TypeScript                                                                                                                                              |
 | CSS 增强             | Windi CSS                                                                                                                                               |
+| markdown 组件化      | vite-plugin-md 和 markdown-it, 使用 markdown-it-prism 实现代码高亮                                                                                      |
 | 按需自动引用         | unplugin-auto-import 自动按需引用 vue 的依赖，unplugin-vue-components 自动按需引用 vue 组件                                                             |
 | \*组件测试与单元测试 | vitest                                                                                                                                                  |
 | \*E2E 测试           | cypress                                                                                                                                                 |
@@ -41,10 +42,9 @@
 
 ## 功能
 
-| 功能                  | 实现工具                                                           |
-| --------------------- | ------------------------------------------------------------------ |
-| 路由                  | vueRouter                                                          |
-| \*状态                | Pinia                                                              |
-| markdown 组件化       | vite-plugin-md 和 markdown-it, 使用 markdown-it-prism 实现代码高亮 |
-| \*coposition api 增强 | vueuse                                                             |
-| \*icon                | 未实现                                                             |
+| 功能                  | 实现工具  |
+| --------------------- | --------- |
+| 路由                  | vueRouter |
+| \*状态                | Pinia     |
+| \*coposition api 增强 | vueuse    |
+| \*icon                | -         |

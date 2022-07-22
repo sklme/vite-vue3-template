@@ -7,13 +7,26 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BuildFeat: typeof import('./components/preset/feat/BuildFeat.vue')['default']
     CodePreset: typeof import('./components/preset/md/CodePreset.md')['default']
-    EslintTest: typeof import('./components/preset/EslintTest.vue')['default']
-    FeatIndex: typeof import('./components/FeatIndex.vue')['default']
+    copy: typeof import('./components/preset/feat/LogicFeat.vue')['default']
+    CriteriaFeat: typeof import('./components/preset/feat/CriteriaFeat.vue')['default']
+    EslintTest: typeof import('./components/preset/trivial/EslintTest.vue')['default']
+    FeatHome: typeof import('./components/preset/FeatHome.vue')['default']
+    FeatIndex: typeof import('./components/preset/feat/FeatPage.vue')['default']
+    FeatPage: typeof import('./components/preset/feat/FeatPage.vue')['default']
+    LogicFeat: typeof import('./components/preset/feat/LogicFeat.vue')['default']
+    Preset: typeof import('./components/preset/index.vue')['default']
     ReactivityTransform: typeof import('./components/preset/reactivity-transform/reactivityTransform.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TCard: typeof import('tdesign-vue-next')['Card']
+    TCol: typeof import('tdesign-vue-next')['Col']
     TestExpose: typeof import('./components/preset/TestExpose.vue')['default']
+    TList: typeof import('tdesign-vue-next')['List']
+    TListItem: typeof import('tdesign-vue-next')['ListItem']
+    TListItemMeta: typeof import('tdesign-vue-next')['ListItemMeta']
+    TRow: typeof import('tdesign-vue-next')['Row']
     WindiCSS: typeof import('./components/preset/WindiCSS/WindiCSS.vue')['default']
   }
 

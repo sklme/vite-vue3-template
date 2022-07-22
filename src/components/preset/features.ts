@@ -46,10 +46,6 @@ export const buildFeatures: Feat[] = [
     title: '*ci and cd',
     desc: 'To be complete',
   },
-  {
-    title: '*changelog 生成 ',
-    desc: 'To be complete',
-  },
 ];
 
 export const criteriaFeatures: Feat[] = [
@@ -62,9 +58,14 @@ export const criteriaFeatures: Feat[] = [
     desc: '代码的美化和风格的统一',
   },
   {
-    title: '*Commitizen',
+    title: 'Commitizen',
     desc: 'git提交规范化',
     src: 'https://github.com/commitizen/cz-cli',
+  },
+  {
+    title: 'simple-git-hooks',
+    desc: 'git hook的抽象，可以用来实现pre-commit的时候lint，和prepare-commit-msg的时候执行cz。相比husky更加轻量和副作用比较小，坏处是每次修改都得手动去执行hooks更新',
+    src: 'https://github.com/toplenboren/simple-git-hooks',
   },
   {
     title: '*conventional-changelog',

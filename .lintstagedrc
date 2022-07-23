@@ -1,3 +1,6 @@
 {
-  "*": "eslint . && prettier --write --cache --ignore-unknown"
+  "*": [
+    "npx prettier --write --cache --ignore-unknown",
+    "npx eslint"
+  ]
 }

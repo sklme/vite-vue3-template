@@ -68,7 +68,7 @@ export const criteriaFeatures: Feat[] = [
     src: 'https://github.com/toplenboren/simple-git-hooks',
   },
   {
-    title: '*lint-staged',
+    title: 'lint-staged',
     desc: '在提交代码之前，对staged的文件进行处理，可以定义自己的处理逻辑，一般用于提交前的lint',
     src: 'https://github.com/okonet/lint-staged#readme',
   },

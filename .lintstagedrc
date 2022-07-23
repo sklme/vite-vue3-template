@@ -1,6 +1,6 @@
 {
   "*": [
-    "npx prettier --write --cache --ignore-unknown",
-    "npx eslint"
-  ]
+    "npx prettier --write --cache --ignore-unknown"
+  ],
+  "src/**/*.ts": "npx eslint"
 }

@@ -24,7 +24,10 @@ if (!releaseRE.test(msg) && !commitRE.test(msg)) {
         `  Proper commit message format is required for automated changelog generation. Examples:\n\n`
       ) +
       `    ${colors.green(`feat: 增加一个非常厉害的功能`)}\n` +
-      `    ${colors.green(`fix: 解决一个用户提出的bug (close #222)`)}\n\n`
+      `    ${colors.green(`fix: 解决一个用户提出的bug (close #222)`)}\n\n` +
+      `  ${colors.blue(
+        'refer to https://www.conventionalcommits.org/en/v1.0.0/ for more infos'
+      )}`
   );
   process.exit(1);
 }

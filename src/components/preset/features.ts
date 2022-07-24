@@ -85,7 +85,7 @@ export const logicFeatures: Feat[] = [
     desc: '路由',
   },
   {
-    title: '*Pinia',
+    title: 'Pinia',
     desc: '全局转台与储存管理',
   },
   {

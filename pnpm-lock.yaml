@@ -21,6 +21,7 @@ specifiers:
   markdown-it-link-attributes: ^4.0.0
   markdown-it-prism: ^2.2.4
   picocolors: ^1.0.0
+  pinia: ^2.0.16
   prism-theme-vars: ^0.2.3
   prismjs: ^1.28.0
   simple-git-hooks: ^2.8.0
@@ -40,6 +41,7 @@ specifiers:
 
 dependencies:
   github-markdown-css: 5.1.0
+  pinia: 2.0.16_j6bzmzd4ujpabbp5objtwxyjp4
   prism-theme-vars: 0.2.3
   tdesign-vue-next: 0.17.2_vue@3.2.37
   vue: 3.2.37
@@ -4813,6 +4815,27 @@ packages:
     dev: true
     optional: true
 
+  /pinia/2.0.16_j6bzmzd4ujpabbp5objtwxyjp4:
+    resolution:
+      {
+        integrity: sha512-9/LMVO+/epny1NBfC77vnps4g3JRezxhhoF1xLUk8mZkUIxVnwfEAIRiAX8mYBTD/KCwZqnDMqXc8w3eU0FQGg==,
+      }
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.2.0
+      typescript: 4.7.4
+      vue: 3.2.37
+      vue-demi: 0.13.5_vue@3.2.37
+    dev: false
+
   /pkg-types/0.3.3:
     resolution:
       {
@@ -5969,7 +5992,6 @@ packages:
       }
     engines: { node: '>=4.2.0' }
     hasBin: true
-    dev: true
 
   /ua-parser-js/0.7.31:
     resolution:
@@ -6252,7 +6274,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
-    dev: true
 
   /vue-eslint-parser/9.0.3_eslint@8.19.0:
     resolution:

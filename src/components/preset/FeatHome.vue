@@ -1,5 +1,5 @@
 <template>
-  <h2 text="2xl center" mb="4">Vue 3 开发环境</h2>
+  <h2 text="2xl center" mb="4">{{ titleStore.title }}</h2>
   <t-row :gutter="16">
     <t-col :span="4">
       <router-link :to="{ name: 'BuildFeat' }">
@@ -46,4 +46,7 @@ import {
   criteriaFeatures,
   logicFeatures,
 } from '~/components/preset/features';
+import { useTitleStore } from '~/store/titleStore';
+
+const titleStore = useTitleStore();
 </script>

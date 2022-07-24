@@ -1,5 +1,15 @@
 Changelog
 
+## [1.2.0](https://github.com/sklme/vite-vue3-template/compare/v1.1.1...v1.2.0) (2022-07-24)
+
+### Features
+
+- **build:** support standard-version ([80151ea](https://github.com/sklme/vite-vue3-template/commit/80151ea61ca74c1d7521b0b9dded90b6314dbe39))
+
+### Bug Fixes
+
+- **pnpm:** force corejs updated ([e9e3029](https://github.com/sklme/vite-vue3-template/commit/e9e3029615d08ce5dfc82b4696ec2e2dd26c2d7d))
+
 ### [1.1.1](https://github.com/sklme/vite-vue3-template/compare/v1.1.0...v1.1.1) (2022-07-24)
 
 ## 1.1.0 (2022-07-24)

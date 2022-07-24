@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "cz": "cz",
     "installHooks": "sh scripts/applySimpleGitHooks.sh",
-    "release": "standard-version"
+    "release": "standard-version",
+    "releaseAsMinor": "standard-version -- --release-as minor"
   },
   "dependencies": {
     "github-markdown-css": "^5.1.0",

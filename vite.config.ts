@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
@@ -71,6 +73,10 @@ export default defineConfig({
       ],
     }),
   ],
+  // 测试配置
+  test: {
+    environment: 'jsdom',
+  },
   server: {
     port: 8061,
   },

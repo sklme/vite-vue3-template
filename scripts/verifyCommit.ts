@@ -1,6 +1,8 @@
 /**
- * 在提交commit信息的时候，校验commit信息是否符合conventional-changelog的规范
- * 如果不符合就报错
+ * @file 在提交commit信息的时候，校验commit信息是否符合conventional-changelog的规范
+ * 如果不符合就报错。
+ *
+ * TODO: 看一下是否有必要替换到commitlint（https://github.com/conventional-changelog/commitlint）
  */
 
 import { readFileSync } from 'node:fs';

@@ -73,9 +73,9 @@ export const criteriaFeatures: Feat[] = [
     src: 'https://github.com/okonet/lint-staged#readme',
   },
   {
-    title: '*conventional-changelog',
-    desc: '从Commitizen规范化的git提交信息中，自动提取changlog',
-    src: 'https://github.com/conventional-changelog/conventional-changelog',
+    title: 'standard-version',
+    desc: '从Commitizen规范化的git提交信息中，自动提取changlog（使用了conventional changelog under the hook），而且自动检查version bump，升级packge.json，然后产生提交和tag',
+    src: 'https://github.com/conventional-changelog/standard-version',
   },
 ];
 

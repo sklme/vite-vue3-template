@@ -48,7 +48,9 @@
     "vue-tsc": "^0.38.9",
     "windicss": "^3.5.6"
   },
-  "overrides": {
-    "core-js": "^3.23.4"
+  "pnpm": {
+    "overrides": {
+      "core-js": "^3.23.4"
+    }
   }
 }

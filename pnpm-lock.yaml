@@ -10,7 +10,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.30.4
   '@vitejs/plugin-vue': ^3.0.1
   '@vue/compiler-sfc': ^3.2.37
-  '@vue/test-utils': 2.0.0-rc.18
+  '@vue/runtime-core': ^3.2.37
   commitizen: ^4.2.5
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.18.0
@@ -45,6 +45,7 @@ specifiers:
   windicss: ^3.5.6
 
 dependencies:
+  '@vue/runtime-core': 3.2.37
   github-markdown-css: 5.1.0
   pinia: 2.0.16_j6bzmzd4ujpabbp5objtwxyjp4
   prism-theme-vars: 0.2.3
@@ -59,7 +60,6 @@ devDependencies:
   '@typescript-eslint/parser': 5.30.4_4x5o4skxv6sl53vpwefgt23khm
   '@vitejs/plugin-vue': 3.0.1_vite@3.0.2+vue@3.2.37
   '@vue/compiler-sfc': 3.2.37
-  '@vue/test-utils': 2.0.0-rc.18_vue@3.2.37
   commitizen: 4.2.5
   cz-conventional-changelog: 3.3.0
   eslint: 8.19.0
@@ -964,17 +964,6 @@ packages:
       {
         integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==,
       }
-
-  /@vue/test-utils/2.0.0-rc.18_vue@3.2.37:
-    resolution:
-      {
-        integrity: sha512-aifolXjVdsogjaLmDoZ0FU8vN+R67aWmg9OuVeED4w5Ij5GFQLrlhM19uhWe/r5xXUL4fXMk3pX5wW6FJP1NcQ==,
-      }
-    peerDependencies:
-      vue: ^3.0.1
-    dependencies:
-      vue: 3.2.37
-    dev: true
 
   /@vue/test-utils/2.0.2_vue@3.2.37:
     resolution:

@@ -25,11 +25,12 @@ export const buildFeatures: Feat[] = [
     title: 'unplugin-auto-import和unplugin-vue-components',
     desc: '自动引用vue api和组件',
   },
+  { title: 'vitest', desc: '单元测试框架', src: 'https://vitest.dev/' },
   {
-    title: '* icon增强',
-    desc: '收到',
+    title: 'vue test library',
+    desc: '模拟vue组件挂载，测试vue组件生成的元素',
+    src: 'https://testing-library.com/docs/vue-testing-library/intro/',
   },
-  { title: '*vitest和Vue Test Utils', desc: '单元测试与组件测试' },
   {
     title: '*cypress',
     desc: 'E2E测试',
@@ -45,6 +46,10 @@ export const buildFeatures: Feat[] = [
   {
     title: '*ci and cd',
     desc: 'To be complete',
+  },
+  {
+    title: '* icon增强',
+    desc: '收到',
   },
 ];
 

@@ -1,22 +1,21 @@
-import { test, describe, it, expect } from 'vitest';
-import { mount } from '@vue/test-utils';
+import { describe, test } from 'vitest';
 import BuildFeatVue from '~/components/preset/feat/BuildFeat.vue';
+import { render } from '@testing-library/vue';
+import { buildFeatures } from '~/components/preset/features';
 
 describe('BuildFeat.vue', () => {
-  const wrapper = mount(BuildFeatVue, {
-    props: {
-      features: [
-        {
-          title: 'Vite',
-          desc: '使用Vite作为代码构建工具，提升开发体验',
-        },
-      ],
-    },
+  test('标题正常', () => {
+    const wrap = render(BuildFeatVue);
+    wrap.getByText('编译、开发、测试与发布');
   });
 
-  console.log(1);
-  console.log(wrapper.text());
-  console.log(1);
+  test('列表渲染正常', () => {
+    // 列表渲染正确
+    const wrap = render(BuildFeatVue);
 
-  expect(wrapper.text()).toContain('编译、开发、测试与发布');
+    buildFeatures.forEach((o) => {
+      wrap.getByText(o.title);
+      wrap.getByText(o.desc);
+    });
+  });
 });

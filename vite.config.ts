@@ -75,6 +75,7 @@ export default defineConfig({
   ],
   // 测试配置
   test: {
+    globals: true,
     environment: 'jsdom',
   },
   server: {

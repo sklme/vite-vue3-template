@@ -29,7 +29,7 @@ export const buildFeatures: Feat[] = [
     title: '* icon增强',
     desc: '收到',
   },
-  { title: '*vitest和Vue Test Utils ', desc: '单元测试与组件测试' },
+  { title: '*vitest和Vue Test Utils', desc: '单元测试与组件测试' },
   {
     title: '*cypress',
     desc: 'E2E测试',

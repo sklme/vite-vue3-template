@@ -4,13 +4,6 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-// 支持md
-import LinkAttributes from 'markdown-it-link-attributes';
-import Prism from 'markdown-it-prism';
-import Markdown from 'vite-plugin-md';
-// marddown 的容器的类
-const markdownWrapperClasses = 'markdown-body';
-
 // 自动引入
 // 组件
 import { TDesignResolver } from 'unplugin-vue-components/resolvers';
@@ -33,21 +26,6 @@ export default defineConfig({
       reactivityTransform: true,
     }),
     WindiCSS(),
-    Markdown({
-      // markdown 容器的类
-      wrapperClasses: markdownWrapperClasses,
-      markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism);
-        md.use(LinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: '_blank',
-            rel: 'noopener',
-          },
-        });
-      },
-    }),
     AutoImport({
       imports: ['vue', 'vue-router', 'vue/macros'],
       dts: 'src/auto-imports.d.ts',
@@ -74,9 +52,6 @@ export default defineConfig({
     }),
   ],
   // 测试配置
-  test: {
-    environment: 'jsdom',
-  },
   server: {
     port: 8061,
   },
